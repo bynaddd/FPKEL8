@@ -3,8 +3,7 @@ import streamlit as st
 list_maskapai = ['', 'Garuda Indonesia', 'Lion Air', 'Citilink', 'Batik Air', 'Sriwijaya Air', 'NAM Air', 'AirAsia Indonesia', 'Wings Air', 'TransNusa', 'Susi Air']
 list_status_penerbangan = ['', 'On Time', 'Delayed', 'Last call']
 
-conn = st.connection("postgresql", type="sql", 
-                     url="postgresql://almanadia414:9nqGX8xJgpYv@ep-yellow-lab-32816215.us-east-2.aws.neon.tech/web")
+conn = st.connection(url="postgresql://almanadia414:9nqGX8xJgpYv@ep-yellow-lab-32816215.us-east-2.aws.neon.tech/web")
 with conn.session as session:
     query = text('CREATE TABLE IF NOT EXISTS SCHEDULE (id serial, maskapai varchar, bandara_asal varchar, bandara_tujuan text, \
                                                        waktu_keberangkatan time, waktu_sampai time, tanggal date, gate_keberangkatan text, status_penerbangan text, layanan_pesawat text, max_capacity varchar);')
