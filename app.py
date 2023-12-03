@@ -1,5 +1,4 @@
 import streamlit as st
-from sqlalchemy import text
 
 list_doctor = ['', 'dr. Nurita', 'dr. Yogi', 'dr. Wibowo', 'dr. Ulama', 'dr. Ping']
 list_symptom = ['', 'male', 'female']
