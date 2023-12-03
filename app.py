@@ -1,5 +1,4 @@
 import streamlit as st
-from sqlalchemy import text
 
 list_maskapai = ['', 'Garuda Indonesia', 'Lion Air', 'Citilink', 'Batik Air', 'Sriwijaya Air', 'NAM Air', 'AirAsia Indonesia', 'Wings Air', 'TransNusa', 'Susi Air']
 list_status_penerbangan = ['', 'On Time', 'Delayed', 'Last call']
